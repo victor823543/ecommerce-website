@@ -1,0 +1,87 @@
+.cartItem {
+    width: 100%;
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 0 1rem;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+    margin: auto 0;
+}
+
+.content {
+    margin: auto 0;
+    display: flex;
+    gap: 2rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.leftContent {
+    flex: 1;
+    min-width: 3rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.rightContent {
+    display: flex;
+  }
+
+.leftContent .h2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.rightContent .h2 {
+    width: max-content;
+}
+
+.h2 {
+    font-weight: 500;
+    margin: 0;
+    
+}
+
+.p {
+    margin: 0;
+}
+
+.amount {
+    display: flex;
+    gap: .75rem;
+    font-size: 1.2rem;
+}
+
+.amountSelect {
+    border: none;
+    font-size: 1.2rem;
+    background-color: inherit;
+}
+
+.amountSelect:focus {
+    outline: none;
+}
+
+.trashBin {
+    margin: .5rem 0;
+    width: 3rem;
+}
+
+@media (min-width: 480px) {
+    .img {
+        width: 15rem;
+        height: 15rem;
+    }
+}

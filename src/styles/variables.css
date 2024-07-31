@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #F8F7F6;
+    --secondary-color: #8EA298;
+    --effect-color: #ACDF1A;
+    --third-color: #82785B;
+    --dark-color: #22242C;
+
+    --logo-color: #f7f9fd;
+}
+
+/* alt colors
+
+
+:root {
+    --primary-color: #FCFBFA;
+    --secondary-color: #CDE1E1;
+    --effect-color: #BFD3E8;
+    --third-color: #D3D5E7;
+    --dark-color: #89AEE0;
+}
+
+:root {
+    --primary-color: #FAFBFB;
+    --secondary-color: #BCCEE6;
+    --effect-color: #8B69E4;
+    --third-color: #77A9E7;
+    --dark-color: #3E6CC9;
+}
+    
+:root {
+    --primary-color: #F6F6F5;
+    --secondary-color: #A7B2AE;
+    --effect-color: #999393;
+    --third-color: #A2A3AE;
+    --dark-color: #514F62;
+}
+*/

@@ -1,0 +1,30 @@
+.reviewBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    height: 100%;
+    width: 20rem;
+    padding: 1.5rem;
+    background-color: var(--dark-color);
+    border-radius: 3rem;
+    color: white;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.comment {
+    font-size: 1.3rem;
+}

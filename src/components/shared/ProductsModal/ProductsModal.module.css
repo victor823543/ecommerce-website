@@ -1,0 +1,60 @@
+.modal {
+    border-radius: 36px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.productContainer {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.arrowContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.arrowContainer:hover {
+    background-color: hsl(from var(--secondary-color) h s calc(l + 5));
+}
+
+.product {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img {
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rating {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.namePriceContainer {
+    display: flex;
+    justify-content: space-between;
+}
+

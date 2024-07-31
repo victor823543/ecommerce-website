@@ -1,0 +1,34 @@
+.starContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+    position: relative;
+    display: inline-block;
+    background-color: #e0e0e0; /* grey background for empty star */
+    clip-path: polygon(
+      50% 0%, 
+      61% 35%, 
+      98% 35%, 
+      68% 57%, 
+      79% 91%, 
+      50% 70%, 
+      21% 91%, 
+      32% 57%, 
+      2% 35%, 
+      39% 35%
+    );
+    overflow: hidden;
+  }
+  
+  .starInner {
+    height: 100%;
+    width: 100%;
+    background-color: var(--effect-color); /* gold color for filled star */
+    
+  }
+  

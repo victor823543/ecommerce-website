@@ -1,0 +1,133 @@
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 1rem 2rem;
+}
+
+.imageSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mainImageContainer {
+    display: flex;
+    background-color: var(--primary-color);
+    border: solid 1px hsl(from var(--primary-color) h s calc(l - 10));
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.arrowContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.arrowContainer:hover {
+    background-color: hsl(from var(--primary-color) h s calc(l - 5));
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.allImages {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.smallImageContainer {
+    flex: 1;
+}
+
+.smallImage {
+    object-fit: contain;
+    width: 100%;
+    background-color: var(--primary-color);
+    border: solid 1px hsl(from var(--primary-color) h s calc(l - 10));
+    border-radius: 24px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.selectedSmallImage {
+    border: solid 1px black !important;
+    opacity: .5;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: clamp(15rem, 80vw, 40rem);
+    margin: 2.5rem auto;
+}
+
+.mainTextContent {
+    padding: 0 2rem;
+}
+
+.h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.brand {
+    margin: .25rem 0;
+    opacity: .7;
+}
+
+.price {
+    margin: .75rem 0;
+    font-size: 1.5rem;
+}
+
+.secondaryTextContent {
+    padding: 0 2rem;
+}
+
+.productInfoContent {
+    padding: 0 2rem;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .productSection {
+        display: flex;
+    }
+
+    .leftSection {
+        width: 50%;
+    }
+
+    .imageSection {
+        position: sticky;
+        top: 10rem;
+    }
+
+    .rightSection {
+        flex: 1;
+        padding-top: 10rem;
+    }
+
+    .buttonsContainer {
+        width: clamp(15rem, 70vw, 20rem);
+    }
+}

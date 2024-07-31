@@ -1,0 +1,224 @@
+.navSmall {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 0 1.5rem;
+    transition: all .4s;
+    z-index: 50;
+}
+
+.navBackground {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(251, 251, 251);
+    z-index: 30;
+}
+
+.open {
+    color: white;
+    --bar-bg: white;
+}
+
+.closed {
+    color: black;
+    --bar-bg: black;
+}
+
+.visible {
+    top: 0;
+}
+
+.hidden {
+    top: -8rem;
+}
+
+
+.rightContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+
+.cartContainerSmall {
+    width: 3rem;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cartNotification {
+    background-color: var(--effect-color);
+    padding: .5rem;
+    border-radius: 100%;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3px;
+    right: 0px;
+}
+
+.logoText {
+    margin: 0 .5rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    z-index: 50;
+    cursor: pointer;
+}
+
+.menuIcon {
+    position: relative;
+    width: fit-content;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 50;
+}
+
+.menuIcon p {
+    text-indent: 50px;
+    margin: 0px;
+}
+
+.menuIcon__cheeckbox {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    position: absolute;
+    opacity: 0;
+}
+
+.menuIcon div {
+    margin: auto 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 22px;
+    height: 12px;
+}
+
+.menuIcon span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bar-bg, #000);
+    border-radius: 1px;
+    transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+}
+
+.menuIcon span:first-of-type {
+    top: 0;
+}
+
+.menuIcon span:last-of-type {
+    bottom: 0;
+}
+
+.menuIcon.active span:first-of-type,
+.menuIcon__cheeckbox:checked + div span:first-of-type {
+    transform: rotate(45deg);
+    top: 5px;
+}
+
+.menuIcon.active span:last-of-type,
+.menuIcon__cheeckbox:checked + div span:last-of-type {
+    transform: rotate(-45deg);
+    bottom: 5px;
+}
+
+.menuIcon.active:hover span:first-of-type,
+.menuIcon.active:hover span:last-of-type,
+.menuIcon:hover .menuIcon__cheeckbox:checked + div span:first-of-type,
+.menuIcon:hover .menuIcon__cheeckbox:checked + div span:last-of-type {
+    width: 22px;
+}
+
+.menuIcon:hover span:first-of-type {
+    width: 26px;
+}
+
+.menuIcon:hover span:last-of-type {
+    width: 12px;
+}
+
+.navBig {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .navSmall {
+        display: none;
+    }
+
+    .navBig {
+        position: fixed;
+        display: flex;
+        border-radius: 32px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        background-color: white;
+        margin: 1.5rem 0;
+        padding: 5px 8px;
+        z-index: 100;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    .logoText {
+        margin-left: 1rem;
+    }
+
+    .links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .linkItem {
+        cursor: pointer;
+
+    }
+
+    .cartContainerBig {
+        width: 5rem;
+        height: 2rem;
+        padding: 1rem;
+        border-radius: inherit;
+        background-color: var(--effect-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .cartContainerBig > .cartNotification {
+        background-color: black;
+        color: white;
+        top: -5px;
+        right: -5px;
+    }
+}

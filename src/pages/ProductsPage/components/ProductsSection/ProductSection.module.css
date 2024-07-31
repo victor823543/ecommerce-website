@@ -1,0 +1,22 @@
+.productSection {
+    padding: 2rem;
+}
+
+.productGrid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+@media (min-width: 610px) {
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .productGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

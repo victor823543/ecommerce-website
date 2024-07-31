@@ -1,0 +1,16 @@
+.categoriesSection {
+    min-height: 100vh;
+    background-color: var(--dark-color);
+    padding: 6rem .5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 600;
+}

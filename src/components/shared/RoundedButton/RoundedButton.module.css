@@ -1,0 +1,48 @@
+.btn {
+    border-radius: 3rem;
+    border: none;
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+    border-radius: inherit;
+    inset: 0;
+    z-index: 20;
+    color: white;
+}
+
+.btnBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    inset: 0;
+    background-color: var(--third-color);
+    z-index: 0;
+}
+
+.span {
+    position: absolute;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 100%;
+}
+
+.span1 {
+    background-color: hsl(from var(--third-color) h s calc(l + 5));
+}
+
+.span2 {
+    background-color: hsl(from var(--third-color) h s calc(l + 10));
+}

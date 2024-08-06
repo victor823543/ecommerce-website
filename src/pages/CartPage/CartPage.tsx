@@ -1,5 +1,4 @@
 import styles from './CartPage.module.css'
-import NavBar from '../../components/common/NavBar/NavBar'
 import CartItem from './components/CartItem/CartItem'
 import { useSelector } from 'react-redux'
 import { selectCartItems } from '../../features/cart/cartSlice'
@@ -29,7 +28,6 @@ const CartPage = () => {
   }    
   return (
     <div className={styles.body}>
-        <NavBar />
         <div className={styles.leftSection}>
             <h1 className={styles.h1}>Shoppingbag</h1>
             <p className={styles.p}>{numberOfItems} products | {totalPrice} $</p>

@@ -1,18 +1,21 @@
-import { FC, useState } from 'react'
-import { motion } from 'framer-motion';
+import { FC, useState, ButtonHTMLAttributes } from 'react'
+import { motion, MotionProps } from 'framer-motion';
 import styles from './StoreButton.module.css'
 
-interface StoreButtonProps {
+
+interface CustomStoreButtonProps {
     color?: string;
     textColor?: string;
     onClick?: () => void;
     children: string;
 }
 
-const StoreButton: FC<StoreButtonProps> = ({color='var(--primary-color)', textColor='black', onClick, children}) => {
+type StoreButtonProps = CustomStoreButtonProps & MotionProps & ButtonHTMLAttributes<HTMLButtonElement>
+
+const StoreButton: FC<StoreButtonProps> = ({color='var(--primary-color)', textColor='black', onClick, children, ...rest}) => {
     const [isHovering, setIsHovering] = useState(false)
   return (
-    <motion.div className={`hover-target ${styles.btn}`} onClick={onClick} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
+    <motion.button {...rest} className={`hover-target ${styles.btn}`} onClick={onClick} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
         whileHover={{scaleX: 1.05}}
         transition={{duration: .1, bounce: 500, bounceStiffness: 100}}
     >
@@ -27,7 +30,7 @@ const StoreButton: FC<StoreButtonProps> = ({color='var(--primary-color)', textCo
             animate={isHovering ? {x: ['0%', '100%'], transition: {delay: 0.3, duration: .4, ease: 'easeOut'}} : {x: ['100%', '200%']}}
             transition={{duration: .4, ease: 'easeOut'}}
         />
-    </motion.div>
+    </motion.button>
   )
 }
 

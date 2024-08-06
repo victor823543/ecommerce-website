@@ -22,7 +22,7 @@ const CartItem: FC<CartItemProps> = ({product, amount}) => {
           <p className={styles.p}>{product.brand}</p>
           <div className={styles.amount}>
             <p className={styles.p}>Amount</p>
-            <select name="amount-selection" id={`amount-select-${product.id}`} className={`hover-target ${styles.amountSelect}`} value={amount} onChange={e => dispatch(setItemAmount({id: product.id, amount: Number(e.target.value)}))} >
+            <select name="amount-selection" aria-label="Select Product Amount" id={`amount-select-${product.id}`} className={`hover-target ${styles.amountSelect}`} value={amount} onChange={e => dispatch(setItemAmount({id: product.id, amount: Number(e.target.value)}))} >
               <option id="0" value={0}>0</option>
               <option id="1" value={1}>1</option>
               <option id="2" value={2}>2</option>
@@ -32,7 +32,7 @@ const CartItem: FC<CartItemProps> = ({product, amount}) => {
             </select>
           </div>
           <div className={styles.actions}>
-            <div className={`hover-target ${styles.trashBin}`} onClick={() => dispatch(deleteItem(product.id))}>
+            <div className={`hover-target ${styles.trashBin}`} aria-label={`Remove id: ${product.id} Button`} onClick={() => dispatch(deleteItem(product.id))}>
               <TrashSvg />
             </div>
           </div>

@@ -58,17 +58,17 @@ const ProductSection: FC<ProductSectionProps> = ({product}) => {
         <div className={styles.leftSection}>
             <div className={styles.imageSection}>
                 <div className={styles.mainImageContainer}>
-                    <div className={`hover-target ${styles.arrowContainer}`} onClick={canClick ? handleLeftClick : undefined}>
+                    <div className={`hover-target ${styles.arrowContainer}`} aria-label='Left Image Button' onClick={canClick ? handleLeftClick : undefined}>
                         <ArrowSvg direction='left' color='var(--effect-color)' />
                     </div>
 
                     <div className={styles.images}>
                         <AnimatePresence>
-                            <motion.img src={product.images[selectedImg]} alt="product-image" className={styles.mainImage} />
+                            <motion.img src={product.images[selectedImg]} aria-label='Main Image' alt="product-image" className={styles.mainImage} />
                         </AnimatePresence>
                     </div>
 
-                    <div className={`hover-target ${styles.arrowContainer}`} onClick={canClick ? handleRightClick : undefined}>
+                    <div className={`hover-target ${styles.arrowContainer}`} aria-label='Right Image Button' onClick={canClick ? handleRightClick : undefined}>
                         <ArrowSvg direction='right' color='var(--effect-color)' />
                     </div>
                 </div>
@@ -89,7 +89,7 @@ const ProductSection: FC<ProductSectionProps> = ({product}) => {
                 <div className={styles.price}>{product.price}$</div>
             </div> 
             <div className={styles.buttonsContainer}>
-                <StoreButton onClick={() => dispatch(addItem(product.id))} color='var(--dark-color)' textColor='white'>Add to cart</StoreButton>
+                <StoreButton onClick={() => dispatch(addItem(product.id))} color='var(--dark-color)' aria-label='Add to Cart Button' textColor='white'>Add to cart</StoreButton>
                 <StoreButton color='var(--third-color)' textColor='white'>Favorite</StoreButton>
             </div>
             <div className={styles.secondaryTextContent}>

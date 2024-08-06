@@ -4,11 +4,11 @@ import { Product } from '../../../../types/types'
 
 import ProductDisplay from '../../../../components/shared/ProductDisplay/ProductDisplay'
 
-interface ProductSectionProps {
+interface ProductsSectionProps {
     products: Product[]|null;
 }
 
-const ProductSection: FC<ProductSectionProps> = ({products}) => {
+const ProductsSection: FC<ProductsSectionProps> = ({products}) => {
   return (
     <div className={styles.productSection}>
         <div className={styles.productGrid}>
@@ -24,4 +24,4 @@ const ProductSection: FC<ProductSectionProps> = ({products}) => {
   )
 }
 
-export default ProductSection
+export default ProductsSection

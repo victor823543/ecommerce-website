@@ -8,9 +8,8 @@ import { useGetAllProductsQuery } from '../../features/api/apiSlice'
 import { useState, useEffect, ChangeEvent } from 'react'
 import { Product, Category, SubCategory, SortingOption } from '../../types/types'
 
-import NavBar from '../../components/common/NavBar/NavBar'
 import FilterSection from './components/FilterSection/FilterSection'
-import ProductSection from './components/ProductsSection/ProductSection'
+import ProductsSection from './components/ProductsSection/ProductSection'
 
 const ProductsPage = () => {  
     const params = useParams()
@@ -104,9 +103,8 @@ const ProductsPage = () => {
 
     return (
       <div className={styles.body}>
-        <NavBar />
         <FilterSection searchValue={searchInput} handleSearchInput={handleSearchChange} selectedCategory={selectedCategory} selectedSubcategory={selectedSubCategory} sortingOption={sortingOption} setSortingOption={setSortingOption} changeUrl={changeUrl}/>
-        <ProductSection products={searchInput.length > 1 ? searchedProducts : filteredProducts}/>
+        <ProductsSection products={searchInput.length > 1 ? searchedProducts : filteredProducts}/>
       </div>
     )
   }
